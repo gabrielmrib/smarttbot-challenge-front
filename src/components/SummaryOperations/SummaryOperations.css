@@ -1,0 +1,131 @@
+.summary-container {
+  box-sizing: border-box;
+  height: max-content;
+  width: 100%;
+  border-radius: 4px;
+  padding: 15px 25px;
+  margin: 8px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.438);
+}
+
+.summary-summary {
+  height: 18px;
+  left: 1.84%;
+  right: 71.22%;
+  top: calc(50% - 18px / 2 - 101px);
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 32px;
+  color: #343234;
+}
+
+.summary-container2 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.summary-bloco {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-fonte {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0;
+  color: #717072;
+}
+
+.summary-movimentação-valor {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ff4501;
+}
+
+.summary-transaçõesRealizadas {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #888689;
+}
+
+.summary-transaçõesRealizadas-valor {
+  position: absolute;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  bottom: 0;
+  right: 0;
+  color: #343234;
+}
+
+.summary-linha {
+  left: 1.84%;
+  right: 1.84%;
+  top: 42.86%;
+  bottom: 56.75%;
+  margin: 16px 0px;
+  background: #e3e2e3;
+}
+
+.summary-linhaId {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  width: 40vw;
+}
+
+.summary-paper-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 8px;
+}
+
+.summary-id {
+  padding: 0 3px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  /* or 167% */
+  color: #ffffff;
+  background: #00b39d;
+  border-radius: 2px;
+}
+
+.summary-numTransações {
+  display: flex;
+  align-content: space-around;
+  flex-basis: 5px;
+}
+
+.summary-pontilhado {
+  position: relative;
+  flex-grow: 2;
+  border: 1px rgba(0, 0, 0, 0.432);
+  border-style: dashed;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  top: -8px;
+  width: 500px;
+}
