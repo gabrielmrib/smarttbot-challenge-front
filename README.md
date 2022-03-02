@@ -4,6 +4,8 @@ Aplicação criada em TypeScript + React consumindo a API da Smarttbot por meio 
 
 ## Site
 
+[http://smarttbot-challenge-front.vercel.app](http://smarttbot-challenge-front.vercel.app)
+
 ## Funcionamento
 
 A aplicação pega as informações necessárias através do endpoint `/robots` e `/strategies` e a partir delas, faz a
