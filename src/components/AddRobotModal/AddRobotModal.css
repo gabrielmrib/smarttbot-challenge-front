@@ -4,7 +4,7 @@
   align-content: center;
   justify-content: center;
   width: 100vw;
-  height: 150%;
+  height: 180%;
   min-height: auto;
   background-color: rgba(0, 179, 158, 0.404);
 }
@@ -162,4 +162,10 @@
 
 .pointer {
   cursor: pointer;
+}
+.add-box>img{
+display: flex;
+/* 
+  height: 90%;
+  width: 90%; */
 }

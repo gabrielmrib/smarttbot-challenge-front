@@ -1,25 +1,62 @@
-import React from "react"
+import React, { useState } from "react"
+import { client } from "../../api/RobotAPI"
+import { IStrategy } from "../../api/StrategyAPI"
 import "./AddRobotModal.css"
-interface IAddRobotsModalData {
-  onClose: () => void
-  id: string
+
+type INewRobotData = {
+  productName?: string
+  initialCapital?: number
+  strategyId?: number
 }
 
-class AddRobotModal extends React.Component<IAddRobotsModalData> {
-  handleCloseClick = (e) => {
-    if (e.target.id === this.props.id) this.props.onClose()
+interface IAddRobotsModalData {
+  onClose: () => void
+  strategies: IStrategy[]
+}
+
+class AddRobotModal extends React.Component<
+  IAddRobotsModalData,
+  INewRobotData
+> {
+  constructor(props: IAddRobotsModalData) {
+    super(props)
+    this.state = {
+      productName: "",
+      initialCapital: 0,
+      strategyId: 0,
+    }
   }
+
+  handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const payload = {
+      title: this.state.productName,
+      mode: 0,
+      strategy_id: this.state.strategyId,
+      initial_capital: this.state.initialCapital,
+      simulation: 0,
+      broker_id: 1,
+    }
+    client
+      .post("/robot", payload)
+      .catch((e) => alert("Erro ao cadastrar robo\nErro:" + e))
+  }
+
+  handleClickStrategy = (event) => {
+    this.setState({ strategyId: event.target.value })
+  }
+
+  handleFormChange = (event) => {
+    const { name, value } = event.target
+    this.setState({ [name]: value })
+  }
+
   render() {
     return (
       <div role="dialog" className="background">
         <div className="modal-container">
           <div className="modal-between modal-font1">
             Adicionar um robo{" "}
-            <span
-              className="pointer"
-              id={this.props.id}
-              onClick={this.handleCloseClick}
-            >
+            <span className="pointer" onClick={this.props.onClose}>
               X
             </span>
           </div>
@@ -27,37 +64,52 @@ class AddRobotModal extends React.Component<IAddRobotsModalData> {
           <div className="modal-font2">Vamos criar seu robô</div>
           <div className="modal-font3">Preencha as informações a baixo:</div>
           <br />
-          <form>
-            <div className="modal-font4">Nome do produto</div>
-            <input
-              type="text"
-              className="input1"
-              placeholder="   Nome do prouto"
-            />
+          <form onSubmit={this.handleSubmit}>
+            <label className="modal-font4" htmlFor="">
+              Nome do produto
+              <input
+                type="text"
+                name="productName"
+                className="input1"
+                placeholder="   Nome do prouto"
+                onChange={this.handleFormChange}
+                value={this.state.productName}
+              />
+            </label>
             <div className="modal-font4">Captal Inicial do robô</div>
-            <input type="" className="input1" placeholder="   R$" />
+            <input
+              name="initialCapital"
+              type="number"
+              min="1"
+              step="any"
+              className="input1"
+              value={this.state.initialCapital}
+              onChange={this.handleFormChange}
+              placeholder="   R$"
+            />
             <br />
             <span className="modal-font1">
               Selecione uma das estratégias a baixo
             </span>
             <div className="form-group" role="dialog" arial-model="true">
-              <button value={1}>Raptor</button>
-              <button value={2}>Tamgram</button>
-              <button value={3}>Hórus</button>
-              <button value={4}>Pontos Pivot</button>
-              <button value={5}>Orion</button>
-              <button value={6}>Futuro</button>
-              <button value={7}>Gauss Contro</button>
+              {this.props.strategies.map((strategy) => {
+                return (
+                  <button
+                    key={strategy.id.toString()}
+                    onClick={this.handleClickStrategy}
+                    type="button"
+                    value={strategy.id.toString()}
+                  >
+                    {strategy.name}
+                  </button>
+                )
+              })}
             </div>
             <div className="modal-between">
-              <span
-                id={this.props.id}
-                onClick={this.handleCloseClick}
-                className="cancel"
-              >
+              <span onClick={this.props.onClose} className="cancel">
                 Cancelar
               </span>
-              <span className="create">Criar Robô</span>
+              <input type="submit" className="create" value="Criar Robô" />
             </div>
           </form>
         </div>
