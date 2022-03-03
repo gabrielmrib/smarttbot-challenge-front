@@ -5,8 +5,12 @@
   background: #ffffff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.438);
   border-radius: 4px;
+  cursor: pointer;
 }
+.add-container:hover{
+  background-color: rgba(0, 0, 0, 0.034);
 
+}
 .add-centralizar {
   position: relative;
   align-items: center;
