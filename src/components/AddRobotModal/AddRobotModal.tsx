@@ -41,11 +41,11 @@ class AddRobotModal extends React.Component<
       .catch((e) => alert("Erro ao cadastrar robo\nErro:" + e))
   }
 
-  handleClickStrategy = (event) => {
+  handleClickStrategy = (event: any) => {
     this.setState({ strategyId: event.target.value })
   }
 
-  handleFormChange = (event) => {
+  handleFormChange = (event: any) => {
     const { name, value } = event.target
     this.setState({ [name]: value })
   }
