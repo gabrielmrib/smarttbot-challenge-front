@@ -1,11 +1,14 @@
 .robot-robotCard {
-  width: 19vw;
-  min-width: max-content;
-  margin: 8px 8px;
+  display: block;
+  box-sizing: border-box;
+  /* max-width: 25rem; */
+  width: 24%;
+  min-width: min-content;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.438);
   border-radius: 4px;
   border-color: black;
   padding: 17px 25px;
+  flex: 0 0 auto;
 }
 
 .robot-title {
@@ -20,6 +23,7 @@
 .robot-firstColum {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .robot-font {
@@ -120,6 +124,9 @@
   font-size: 14px;
   line-height: 20px;
   color: #00b39d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .robot-saldo-negocições {
