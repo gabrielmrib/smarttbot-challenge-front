@@ -1,0 +1,154 @@
+.robot-robotCard {
+  width: 19vw;
+  min-width: max-content;
+  margin: 8px 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.438);
+  border-radius: 4px;
+  border-color: black;
+  padding: 17px 25px;
+}
+
+.robot-title {
+  height: 18px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #343234;
+}
+
+.robot-firstColum {
+  display: flex;
+  justify-content: space-between;
+}
+
+.robot-font {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #00000093;
+}
+
+.robot-id {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  margin: 0;
+  color: #000000;
+}
+
+.robot-ativos {
+  display: flex;
+  align-content: space-between;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #000000;
+}
+
+.robot-box-ativos {
+  padding: 0 2px;
+  margin: 5px 3px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 167%;
+  color: #14141462;
+  background: #ffffff;
+  border: 1px solid #14141462;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.robot-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+  height: 64px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #080808;
+  border-radius: 2px;
+}
+
+.robot-box1 {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  color: #5f5d60;
+}
+
+.robot-box2 {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1b1a2280;
+}
+
+.robot-box3 {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #343234;
+}
+
+.robot-box4 {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #303030bb;
+}
+
+.robot-box5 {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #00b39d;
+}
+
+.robot-saldo-negocições {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.robot-saldoValor {
+  width: 95px;
+  height: 20px;
+  margin-top: 10px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ff4501;
+}
+
+.robot-tradeDia {
+  position: relative;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 10px;
+  left: 0;
+  color: #5f5d60;
+  text-align: right;
+}
